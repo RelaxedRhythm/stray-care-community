@@ -13,6 +13,7 @@ import volunteerRoutes from './routes/volunteers.js';
 import adminRoutes from './routes/admin.js';
 import ledgerRoutes from './routes/ledger.js';
 import paymentRoutes from './routes/payments.js';
+import markerRoutes from './routes/mapmarkers.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -30,6 +31,7 @@ app.use('/api/volunteers', volunteerRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/ledger', ledgerRoutes);
 app.use('/api/payments', paymentRoutes);
+app.use('/api/markers', markerRoutes);
 
 app.get('/api/health', (_, res) => res.json({ ok: true }));
 
