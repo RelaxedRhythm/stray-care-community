@@ -39,7 +39,7 @@ app.use((err, _req, res, _next) => {
   res.status(status).json({ message: err.message || 'Server error' });
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 9000;
 
 mongoose
   .connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/straycare')
